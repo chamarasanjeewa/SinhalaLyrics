@@ -1,0 +1,52 @@
+ 
+<ion-view view-title="" align-title="left">
+ 	<ion-content>
+<div class="row">
+  <div class="col col-100 logo search-exam-head">
+      <div class="logotext">
+        <br/>
+        <h2 class="searchh">Search Your Exam</h2>
+        <p class="searchtxt">Description text should be added here. <br/> 
+added here.</p><br/><br/>
+     </div>
+  </div>
+</div><!--row-->
+
+<div class="row">
+  <div class="col col-10">       
+  </div>
+  <div class="col col-80 examfeet-formstyle">
+      <form>
+        <!--Error Message-->
+        <!--span class="error-msg text-center">Incorrect Username or Password
+        </span-->
+        <!--End of Error Message-->
+         
+      <input type="text" ng-model="selectedText" ng-change="onSearchTextChange(selectedText)" placeholder="Keyword Search" class="searchinput  searchtxtinput">
+      <select  ng-model="selectedCountry" ng-options="country as country.name for country in countryList"  ng-change="setSelectedCountry(selectedCountry)" class="searchinput searchselect">
+      </select>
+
+   <select   ng-model="selectedFaculty" ng-options="faculty as faculty.facultyName for faculty in facultyList" ng-change="getSpecializationList(selectedFaculty)" class="searchinput searchselect"> </select>
+          <!--<select class="searchinput searchselect">
+            <option>Faculty </option>
+            <option>Green</option>
+            <option>Red</option>
+          </select>-->
+   <select  ng-model="selectedSpecialization"  ng-disabled="!selectedFaculty" ng-options="specialization as specialization.name for specialization in specializationList" class="searchinput searchselect" ng-change="setSelectedSpecialization(selectedSpecialization)">  
+    </select>
+          <!--<select class="searchinput searchselect">
+            <option>Speciality</option>
+            <option>Green</option>
+            <option>Red</option>
+          </select>-->
+
+        
+        <button class="button button-full " ng-click="getSearchResultList()">Search Exams</button>
+      <form>
+  </div>
+  <div class="col col-10 ">       
+  </div>
+</div><!--row-->
+
+	</ion-content>
+</ion-view>
