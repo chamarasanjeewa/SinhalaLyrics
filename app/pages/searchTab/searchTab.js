@@ -7,9 +7,9 @@ import {Page, NavController} from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Page({
-  templateUrl: 'build/pages/tabthree/tabthree.html',
+  templateUrl: 'build/pages/searchTab/searchTab.html',
 })
-export class tab3Root {
+export class searchTab {
   static get parameters() {
     return [[NavController]];
   }
