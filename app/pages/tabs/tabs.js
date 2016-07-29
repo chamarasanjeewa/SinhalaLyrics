@@ -1,6 +1,6 @@
 import {Page} from 'ionic-angular';
-import {tab1Root} from '../tabone/tabone';
-import {tab2Root} from '../tabtwo/tabtwo';
+import {settingsTab} from '../settingsTab/settingsTab';
+import {listTab} from '../listTab/listTab';
 import {searchTab} from '../searchTab/searchTab';
 
 
@@ -9,8 +9,8 @@ import {searchTab} from '../searchTab/searchTab';
 })
 export class TabsPage {
   constructor() {
-    this.tab1Root = tab1Root;
-    this.tab2Root = tab2Root;
+    this.settingsTab = settingsTab;
+    this.listTab = listTab;
     this.searchTab = searchTab;
   }
 }
