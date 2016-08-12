@@ -5,14 +5,12 @@
     <ion-title>Search tab</ion-title>
 </ion-navbar>
 <ion-content padding>
-    <h3>This is search tab</h3>
+    <h3>Search lyrics</h3>
+  
+    <ion-input>
+  <input type="text" placeholder="Username">
+</ion-input>
     <p>
-        This starter project for Tabs with Side Menu.
-    </p>
-    <p>
-        Code along and have fun.
-    </p>
-    <p>
-        <button primary menuToggle>Toggle Menu</button>
+        <button (click)="saveLyrics()" primary menuToggle>Search</button>
     </p>
 </ion-content>
