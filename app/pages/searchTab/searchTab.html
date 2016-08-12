@@ -6,11 +6,18 @@
 </ion-navbar>
 <ion-content padding>
     <h3>Search lyrics</h3>
-  
-    <ion-input>
-  <input type="text" placeholder="Username">
-</ion-input>
+   <ion-list inset>
+        <ion-item>
+    <ion-input [(ngModel)]="searchString" type="text"></ion-input>
+      </ion-item>
+    </ion-list>
     <p>
-        <button (click)="saveLyrics()" primary menuToggle>Search</button>
+        <button (click)="getAllByArtist(searchString)" primary menuToggle>Search</button>
     </p>
+    
+    <ion-list ion-item *ngFor="let elt of lyricsArray"  >
+
+  <ion-textarea [(ngModel)]="elt.lyrics" rows="8" cols="10" ng-readonly="true"></ion-textarea>
+ 
+</ion-list> 
 </ion-content>
