@@ -5,22 +5,5 @@
     <ion-title>Settings</ion-title>
 </ion-navbar>
 <ion-content padding class="details">
-  <ion-list inset>
-    <ion-item>
-      <ion-label>Artist</ion-label>
-      <ion-input type="text" [(ngModel)]="lyricsObj.artist"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Lyrics</ion-label>
-     <ion-textarea type="text" [(ngModel)]="lyricsObj.lyricsText"></ion-textarea>
-    </ion-item>
-  </ion-list>
-  <button block (click)="addLyrics()">Save</button>
-  
-  <ion-list >
-    <ion-item *ngFor="let lyric of lyrics">
-      <div item-left>{{ lyric.artist }}</div>
-     
-    </ion-item>
-  </ion-list>
+<ion-textarea [(ngModel)]="selectedSong.lyrics" rows="8" cols="500" ng-readonly="true"></ion-textarea>
 </ion-content>

@@ -5,12 +5,9 @@
     <ion-title>Songs list</ion-title>
 </ion-navbar>
 <ion-content padding>
-    <h3></h3>
- 
-    <p>
-       This is songs tab
-    </p>
-    <p>
-        <button primary menuToggle>Toggle Menu</button>
-    </p>
+   
+   <ion-list>
+        <ion-item (click)="showSong(song)" *ngFor="let song of songsList; let i = index;">{{i+1}}. {{song.SongName}}</ion-item>
+    </ion-list>
+  
 </ion-content>
