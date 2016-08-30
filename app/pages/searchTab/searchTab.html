@@ -5,19 +5,21 @@
     <ion-title>Search tab</ion-title>
 </ion-navbar>
 <ion-content padding>
-    <h3>Search lyrics</h3>
-   <ion-list inset>
+   <ion-item>
+    <!--<ion-label fixed>Search lyrics</ion-label>-->
+   <ion-input [(ngModel)]="searchString" type="text" placeholder="Search Lyrics"></ion-input>
+  </ion-item>
+  
+   <!--<ion-list inset>
         <ion-item>
     <ion-input [(ngModel)]="searchString" type="text"></ion-input>
       </ion-item>
-    </ion-list>
+    </ion-list>-->
     <p>
         <button (click)="getAllByArtist(searchString)" primary menuToggle>Search</button>
     </p>
     
-    <!--<ion-list ion-item *ngFor="let elt of lyricsArray"  >-->
-<!--
-  <ion-textarea [(ngModel)]="elt.lyrics" rows="8" cols="10" ng-readonly="true"></ion-textarea>-->
- 
-<!--</ion-list> -->
+  
+  <p>{{noresults}}</p>
+  
 </ion-content>
