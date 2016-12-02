@@ -1,3 +1,4 @@
+<!--<spinner [isRunning]="spinnerParams"></spinner>-->
 <ion-navbar *navbar>
     <button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -5,21 +6,17 @@
     <ion-title>Search tab</ion-title>
 </ion-navbar>
 <ion-content padding>
-   <ion-item>
-    <!--<ion-label fixed>Search lyrics</ion-label>-->
+   <ion-item >
    <ion-input [(ngModel)]="searchString" type="text" placeholder="Search Lyrics"></ion-input>
   </ion-item>
-  
-   <!--<ion-list inset>
-        <ion-item>
-    <ion-input [(ngModel)]="searchString" type="text"></ion-input>
-      </ion-item>
-    </ion-list>-->
-    <p>
+
+ <ion-spinner name="bubbles" [hidden]="hideSpinner"></ion-spinner>
+    <p >
         <button (click)="getAllByArtist(searchString)" primary menuToggle>Search</button>
     </p>
     
-  
-  <p>{{noresults}}</p>
+    <ion-list *ngIf=" lyricsArray!=undefined && lyricsArray.length>0" >
+        <ion-item (click)="showSong(song)" *ngFor="let song of lyricsArray; let i = index;">{{i+1}}. {{song.SongName}}</ion-item>
+    </ion-list>
   
 </ion-content>

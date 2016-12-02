@@ -5,8 +5,8 @@
     <ion-title>Search result</ion-title>
 </ion-navbar>
 <ion-content padding>
-   
-   <ion-list>
+    <ion-spinner name="bubbles"></ion-spinner>
+   <ion-list *ngIf="lyricsArray.length>0">
         <ion-item (click)="showSong(song)" *ngFor="let song of songsList; let i = index;">{{i+1}}. {{song.SongName}}</ion-item>
     </ion-list>
   
