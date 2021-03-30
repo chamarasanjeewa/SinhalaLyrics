@@ -1,4 +1,6 @@
 #attempt to create lyrics app for sinhala
+
+
 This is an attempt to try to create a lyrics app for sinhala with the use of ionic as the framework.
 
 # How to run the app
